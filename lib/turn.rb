@@ -1,3 +1,14 @@
+def display_board(board)
+   puts " #{board[0]} | #{board[1]} | #{board[2]} "
+   puts "-----------"
+   puts " #{board[3]} | #{board[4]} | #{board[5]} "
+   puts "-----------"
+   puts " #{board[6]} | #{board[7]} | #{board[8]} "
+end
+
+
+
+
 def turn(board)
    puts "Please enter 1-9:"
    user_input = gets.strip
@@ -6,8 +17,7 @@ def turn(board)
       move(board, index, current_player(board))
       turn(board)
 end
-  board = ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
-end
+
 display_board(board)
 def input_to_index(user_input)
    user_input.to_i - 1
@@ -29,13 +39,6 @@ def valid_move?(board, index)
 end
 
 
-def display_board(board)
-   puts " #{board[0]} | #{board[1]} | #{board[2]} "
-   puts "-----------"
-   puts " #{board[3]} | #{board[4]} | #{board[5]} "
-   puts "-----------"
-   puts " #{board[6]} | #{board[7]} | #{board[8]} "
-end
 
 def input_to_index(user_input)
    user_input.to_i - 1
