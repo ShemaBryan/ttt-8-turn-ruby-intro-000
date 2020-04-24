@@ -45,13 +45,7 @@ def input_to_index(user_input)
    index -= 1
    return index
 
-   def valid_move?(board, index)
-     def position_taken?(array, index)
-       if array[index] == " " || array[index] == "" || array[index] == nil
-         return false
-       else
-         return true
-       end
+
 
        def on_board?(num)
            if num.between?(0, 8) == true
